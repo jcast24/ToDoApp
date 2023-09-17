@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: block;
+}
+
+.header-title {
+  text-align: center;
+}
+
+.form-el {
+  text-align: center;
+}
+
+.input-el {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.button-el {
+  padding: 0 10px 0 10px;
+}
+
+.delete-btn {
+  padding: 0 10px 0 10px;
+  margin-left: 5px;
+}

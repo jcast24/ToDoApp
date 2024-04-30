@@ -12,16 +12,36 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [todoValue, setTodoValue] = useState('');
 
+  // persist the data 
+  function persistData(newList) {
+    localStorage.setItem('todos', JSON.stringify({ todos: newList }));
+  }
+
 
   // useEffects takes in a callback function and a dependency array
   // if you want it to listen to the change of a variable, you pass in the variable into the array
   // for example, todos
   // if you want to run it on pageload, leave it as an empty array
-  useEffect(() => { }, [])
+  useEffect(() => {
+    if (!localStorage) {
+      return
+    }
+
+    let localTodos = localStorage.getItem('todos')
+
+    if (!localTodos) {
+      return
+    }
+
+    localTodos = JSON.parse(localTodos).todos
+    setTodos(localTodos);
+
+  }, [])
 
   // to update the todos, have to use setTodos
   function handleUpdateTodos(newTodo) {
     const newTodosList = [...todos, newTodo];
+    persistData(newTodoList);
     setTodos(newTodosList);
   }
 
@@ -29,6 +49,7 @@ function App() {
     const newTodoList = todos.filter((todo, todoIndex) => {
       return todoIndex !== index;
     })
+    persistData(newTodoList);
     setTodos(newTodoList);
   }
 

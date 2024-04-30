@@ -2,6 +2,8 @@
 
 Creating a basic ToDo app using React and React state hook to be able to create a list of things that we need to get done!
 
+This is primarily for learning and to have a better understanding of React, React useState, and useEffect. 
+
 Code from before:
 
 ```jsx

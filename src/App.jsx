@@ -41,7 +41,7 @@ function App() {
   // to update the todos, have to use setTodos
   function handleUpdateTodos(newTodo) {
     const newTodosList = [...todos, newTodo];
-    persistData(newTodoList);
+    persistData(newTodosList);
     setTodos(newTodosList);
   }
 

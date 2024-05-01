@@ -1,30 +1,57 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: azure;
+    font-family: "inter", "monserrat";
 }
 
-.container {
-  display: block;
+/* HTML body */
+
+body {
+    display: flex;
+    justify-content: center;
 }
 
-.header-title {
-  text-align: center;
+
+/* header is the input box and the add button */
+header {
+    /* border: 1px solid black; */
+    padding: 20px;
+    display: flex;
+    align-items: stretch;
 }
 
-.form-el {
-  text-align: center;
+header input {
+    width: 50rem;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: large;
 }
 
-.input-el {
-  margin-top: 10px;
-  margin-right: 10px;
+.addBtn {
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 10px;
 }
 
-.button-el {
-  padding: 0 10px 0 10px;
+/* main is the list content */
+.main {
+    /* border: 1px solid red; */
+    margin-top: 10px;
 }
 
-.delete-btn {
-  padding: 0 10px 0 10px;
-  margin-left: 5px;
+/* toDo item is each individual item in the list, which also includes the delete/edit buttons */
+.todoItem {
+    /* border: 1px solid green; */
+    list-style-type: none;
+    padding: 20px;
+    font-size: large;
+    margin: 5px;
+    display: flex;
+}
+
+.actionsContainer {
+    /* border: 1px solid plum; */
+    margin-left: 80%;
 }

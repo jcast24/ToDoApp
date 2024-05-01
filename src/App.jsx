@@ -5,7 +5,6 @@ import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 
 function App() {
-
   // creating a stateful variable
   // react state
   // basically a variable that the user is going to interact with
@@ -17,7 +16,6 @@ function App() {
     localStorage.setItem('todos', JSON.stringify({ todos: newList }));
   }
 
-
   // useEffects takes in a callback function and a dependency array
   // if you want it to listen to the change of a variable, you pass in the variable into the array
   // for example, todos
@@ -26,16 +24,12 @@ function App() {
     if (!localStorage) {
       return
     }
-
     let localTodos = localStorage.getItem('todos')
-
     if (!localTodos) {
       return
     }
-
     localTodos = JSON.parse(localTodos).todos
     setTodos(localTodos);
-
   }, [])
 
   // to update the todos, have to use setTodos
@@ -48,7 +42,7 @@ function App() {
   function handleDeleteTodo(index) {
     const newTodoList = todos.filter((todo, todoIndex) => {
       return todoIndex !== index;
-    })
+    });
     persistData(newTodoList);
     setTodos(newTodoList);
   }

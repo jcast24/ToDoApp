@@ -6,52 +6,34 @@
     font-family: "inter", "monserrat";
 }
 
-/* HTML body */
-
-body {
-    display: flex;
-    justify-content: center;
-}
-
-
 /* header is the input box and the add button */
 header {
-    /* border: 1px solid black; */
-    padding: 20px;
+    border: 2px solid black;
     display: flex;
-    align-items: stretch;
-}
-
-header input {
-    width: 50rem;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: large;
-}
-
-.addBtn {
-    padding: 5px;
-    margin-left: 10px;
-    border-radius: 10px;
+    justify-content: center;
+    margin: 10px;
 }
 
 /* main is the list content */
 .main {
-    /* border: 1px solid red; */
-    margin-top: 10px;
+    border: 2px solid red;
+    margin: 10px;
 }
 
 /* toDo item is each individual item in the list, which also includes the delete/edit buttons */
 .todoItem {
-    /* border: 1px solid green; */
+    border: 1px solid green;
     list-style-type: none;
-    padding: 20px;
-    font-size: large;
-    margin: 5px;
     display: flex;
+    justify-content: space-between;
 }
 
+/* the individual buttons */
+
 .actionsContainer {
-    /* border: 1px solid plum; */
-    margin-left: 80%;
+    border: 1px solid plum;
+}
+
+.editBtn {
+    margin-left: 10px;
 }

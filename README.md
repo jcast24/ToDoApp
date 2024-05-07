@@ -4,6 +4,8 @@ Creating a basic ToDo app using React and React state hook to be able to create 
 
 This is primarily for learning and to have a better understanding of React, React useState, and useEffect. 
 
+Add notes here:
+
 Code from before:
 
 ```jsx
